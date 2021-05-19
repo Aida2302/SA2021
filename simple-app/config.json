@@ -1,4 +1,0 @@
-{
-    "VERIFY_SSL": false,
-    "SQLALCHEMY_DATABASE_URI": "postgresql+psycopg2://@localhost:5432/postgres"
-}

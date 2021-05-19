@@ -1,0 +1,4 @@
+{
+    "VERIFY_SSL": false,
+    "SQLALCHEMY_DATABASE_URI": "postgresql+psycopg2://test:test@0.0.0.0:5405/test"
+}
