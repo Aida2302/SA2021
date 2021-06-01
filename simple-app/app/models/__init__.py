@@ -1,2 +1,2 @@
-from .api_request import Student
+from .Student import Student
 from .database import db

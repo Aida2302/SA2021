@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: simple-app-deployment
   labels:
-    app: my-app
+    app: simple-app
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
         app: simple-app
     spec:
       containers:
-      - name: my-app-web
-        image: aida2302/my-app_web
+      - name: simple-app
+        image: simple-app:v1
         ports:
         - containerPort: 5000
