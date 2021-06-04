@@ -1,9 +1,12 @@
 from flask import Flask, request, redirect, jsonify
 from models import db, Student
+import os
 
 app = Flask(__name__)
-app.config.from_json("config.json")
+# app.config.from_json("config.json")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URI', '')
+app.config["VERIFY_SSL"] = False
 
 db.init_app(app)
 
