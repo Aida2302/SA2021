@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+metadata:
+  name: my-app
+build:
+  artifacts:
+  - image: aida2302/my-app_web
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
+    - ingress.yaml
+    - service.yaml
