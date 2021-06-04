@@ -31,13 +31,9 @@ spec:
       containers:
       - name: postgres
         image: postgres:latest
-        env:
-          - name: POSTGRES_DB
-            value: test
-          - name: POSTGRES_USER
-            value: test
-          - name: POSTGRES_PASSWORD
-            value: test
+        envFrom:
+          - configMapRef:
+              name: postgres-config-demo
         ports:
         - containerPort: 5432
           name: postgredb
