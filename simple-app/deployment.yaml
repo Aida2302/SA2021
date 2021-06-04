@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: simple-app
-        image: simple-app:v1
+        image: aida2302/simple-app:v1
         env:
           - name: DATABASE_URI
             valueFrom:

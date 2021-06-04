@@ -1,6 +1,6 @@
 replicaCount: 1
 
-image: simple-app:v1
+image: aida2302/simple-app:v1
 
 service:
   type: NodePort
