@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: simple-app-secret
+type: Opaque
+data:
+  DATABASE_URI: cG9zdGdyZXNxbCtwc3ljb3BnMjovL3Rlc3Q6dGVzdEBwb3N0Z3Jlczo1NDMyL3Rlc3Q=

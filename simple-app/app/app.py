@@ -18,6 +18,7 @@ def to_array(all_vendors):
 
 @app.route('/health-check')
 def hello_world():
+    print(app.config["SQLALCHEMY_DATABASE_URI"] + ' Aida')
     print("health check")
     return 'Hello World!'
 

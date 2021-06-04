@@ -17,5 +17,11 @@ spec:
       containers:
       - name: simple-app
         image: simple-app:v1
+        env:
+          - name: DATABASE_URI
+            valueFrom:
+              secretKeyRef:
+                name: simple-app-secret
+                key: DATABASE_URI
         ports:
         - containerPort: 5000
