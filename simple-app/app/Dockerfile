@@ -1,5 +1,15 @@
-FROM python:3.5-onbuild
+FROM python:3.9-slim
 
-EXPOSE 5000
+ENV PYTHONUNBUFFERED 1
 
-ENTRYPOINT ["python", "/usr/src/app/app.py"]
+RUN apt-get update && apt-get install -y build-essential
+
+COPY requirements.txt /tmp
+
+RUN pip install -r /tmp/requirements.txt
+
+COPY . /code
+
+WORKDIR /code
+
+CMD ["flask", "run"]
