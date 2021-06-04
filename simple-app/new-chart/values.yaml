@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image: simple-app:v1
+
+service:
+  type: NodePort
+  port: 5000
+
+externalPostgresql:
+  postgresqlDatabase: test
+  postgresqlUsername: test
+  postgresqlPassword: test
+  postgresqlHost: "postgres"
+  postgresqlPort: "5432"
